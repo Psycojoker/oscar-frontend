@@ -132,111 +132,85 @@
 <!-- /Section: probleme -->
 
 <!-- Section: newsletter -->
-<section id="newsletter" class="home-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="boxed-grey">
-                    <form id="contact-form">
-                        <div class="heading-contact">
-                            <div class="row">
-                                <div class="section-heading">
-                                    <h2>Se tenir informé</h2>
+<section id="newsletter" class="home-section text-center" style="padding-top: 60px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Nouvelles</h2>
+            <p>foobar</p>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="row">
+                    <h2>Se tenir informé</h2>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="boxed-grey">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
                                 </div>
                             </div>
-                        </div>
+                            <button type="submit" class="btn btn-skin">
+                                S'abonner à la newsletter
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 50px; padding-bottom: 30px">
+            <h2>Prendre contact</h2>
+            <div class="row">
+                <div class="boxed-grey">
+                    <form id="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="name">
+                                        Nom</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nom" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">
+                                        Adresse email</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-envelope"></span>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
-                                        <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
-                                    </div>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required="required" /></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">
+                                        Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Object du message" required="required" />
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <button type="submit" class="btn btn-skin">
-                                    S'abonner à la newsletter
-                                </button>
+                                <div class="form-group">
+                                    <label for="name">
+                                        Message</label>
+                                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                                    Envoyer le message</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
 
+
+            </div>
+        </div>
     </div>
 </section>
 <!-- /Section: newsletter -->
-
-<!-- Section: contact -->
-<section id="contact" class="home-section text-center">
-    <div class="heading-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="section-heading">
-                        <h2>Prendre contact</h2>
-                        <i class="fa fa-2x fa-angle-down"></i>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-5">
-                <hr class="marginbot-50">
-            </div>
-        </div>
-        <div class="row">
-            <div class="boxed-grey">
-                <form id="contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">
-                                    Nom</label>
-                                <input type="text" class="form-control" id="name" placeholder="Nom" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">
-                                    Adresse email</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required="required" /></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">
-                                    Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Object du message" required="required" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">
-                                    Message</label>
-                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                    placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
-                                Envoyer le message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- /Section: contact -->
 
 <footer>
     <div class="container">
