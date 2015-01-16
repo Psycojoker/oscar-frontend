@@ -305,6 +305,7 @@ hr {
     width:100%;
     position:relative;
     background: url(../img/bg1.jpg) no-repeat top center;
+    background-size: cover;
 }
 
 #intro.intro {
@@ -353,6 +354,7 @@ hr {
     width:100%;
     position:relative;
     background: url(../img/man-suit-blackboard-science-math.jpg) no-repeat top center;
+    background-size: cover;
     color: #FFF;
     text-shadow: none;
     font-size: 60px;
