@@ -363,13 +363,42 @@ hr {
     font-family: Montserrat, sans-serif;
     background-color: rgba(0, 0, 0, 0);
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
     border-width: 0px;
     border-color: #000;
     border-style: none;
     text-shadow: -1px 0 1px #000;
     color: #fff;
     text-shadow: -1px 1px 1px #000;
+}
+
+.probleme h2 {
+    text-transform: none;
+}
+
+.probleme h3 {
+    text-transform: none;
+}
+
+.probleme h4 {
+    background-color: #f8f8f8;
+    color: #444444;
+    text-transform: none;
+    text-shadow: none;
+    text-align: center;
+    height: 66px;
+    line-height: 66px;
+    width: 263px;
+    border: solid #666666 3px;
+}
+
+
+.probleme h4 span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
+    padding: 13px;
+    padding-bottom: 21px;
 }
 
 
