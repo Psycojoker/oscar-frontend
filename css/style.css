@@ -401,6 +401,14 @@ hr {
     padding-bottom: 21px;
 }
 
+#nouvelles h4 {
+    margin-bottom: 5px;
+}
+
+#nouvelles p {
+    text-align: left;
+}
+
 
 /* ===========================
 --- About

@@ -33,6 +33,25 @@
             }, 1500, 'easeInOutExpo');
             event.preventDefault();
         });
+        jQuery.getFeed({
+            url: 'http://oscar.education/news/?feed=rss2',
+            success: function(feed) {
+                console.log(feed);
+                target = $("#nouvelles")
+                feed.items.forEach(function(item) {
+                    console.log(item);
+                    item.title;
+                    item.link;
+                    item.description;
+                    var date = new Date(item.updated);
+                    var month = date.getMonth() + 1;
+                    if (month < 10) {
+                        var month = "0" + month;
+                    }
+                    target.append('<h4>' + date.getDate() + '/' + month + ' - <a href="' + item.link + '">' + item.title + '</a></h4><p><i>' + item.description + '</i></p>');
+                })
+            }
+        });
     });
 
 })(jQuery);
