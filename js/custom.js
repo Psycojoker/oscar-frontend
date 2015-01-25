@@ -53,6 +53,9 @@
             }
         });
         $("#newsletter-form button").click(function(event) {
+            $("#newsletter-form .form-group").removeClass("has-error");
+            $("#newsletter-email-errors").html("");
+
             event.preventDefault();
             var email = $("#newsletter-email").val();
             if (!email || email.indexOf("@") == -1) {
