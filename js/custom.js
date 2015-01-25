@@ -55,6 +55,11 @@
         $("#newsletter-form button").click(function(event) {
             event.preventDefault();
             var email = $("#newsletter-email").val();
+            if (!email || email.indexOf("@") == -1) {
+                $("#newsletter-form .form-group").addClass("has-error");
+                $("#newsletter-email-errors").html("<p>Erreur: email invalide</p>");
+                return;
+            }
             $("#newsletter-loader").show();
             $("#newsletter-email-group").hide();
             $.post("news/wp-content/plugins/newsletter/do/subscribe.php", {ne: email})
@@ -64,13 +69,17 @@
                 .success(function(data) {
                     console.log(data);
                     if (data == "Wrong email") {
-                        $("#newsletter-email-answer").show().html('<p>Votre email est incorrecte.</p>');
+                        $("#newsletter-email-group").show();
+                        $("#newsletter-form .form-group").addClass("has-error");
+                        $("#newsletter-email-errors").html("<p>Erreur: email invalide</p>");
                     } else {
                         $("#newsletter-email-answer").show().html('<p>Un email de confirmation vous a été envoyé.</p>');
                         $("#newsletter-form button").attr("disabled", "");
                     }
                 }).error(function() {
-                    $("#newsletter-email-answer").show().html('<p>Oups, une erreur s\'est produite.</p>');
+                    $("#newsletter-email-group").show();
+                    $("#newsletter-form .form-group").addClass("has-error");
+                    $("#newsletter-email-errors").html("<p>Oups, une erreur s'est produite.</p>");
                 })
         })
     });

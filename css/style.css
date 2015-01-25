@@ -409,6 +409,11 @@ hr {
     text-align: left;
 }
 
+#newsletter-email-errors p {
+    color: #A94442;
+    font-weight: bold;
+}
+
 
 /* ===========================
 --- About
