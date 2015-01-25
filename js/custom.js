@@ -52,6 +52,27 @@
                 })
             }
         });
+        $("#newsletter-form button").click(function(event) {
+            event.preventDefault();
+            var email = $("#newsletter-email").val();
+            $("#newsletter-loader").show();
+            $("#newsletter-email-group").hide();
+            $.post("news/wp-content/plugins/newsletter/do/subscribe.php", {ne: email})
+                .always(function() {
+                    $("#newsletter-loader").hide();
+                })
+                .success(function(data) {
+                    console.log(data);
+                    if (data == "Wrong email") {
+                        $("#newsletter-email-answer").show().html('<p>Votre email est incorrecte.</p>');
+                    } else {
+                        $("#newsletter-email-answer").show().html('<p>Un email de confirmation vous a été envoyé.</p>');
+                        $("#newsletter-form button").attr("disabled", "");
+                    }
+                }).error(function() {
+                    $("#newsletter-email-answer").show().html('<p>Oups, une erreur s\'est produite.</p>');
+                })
+        })
     });
 
 })(jQuery);

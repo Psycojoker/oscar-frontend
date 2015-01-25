@@ -157,13 +157,16 @@
                 </div>
                 <div class="col-md-10 col-md-offset-1">
                     <div class="boxed-grey">
-                        <form id="contact-form">
+                        <form id="newsletter-form">
                             <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
+                                <div id="newsletter-email-answer" style="display: none">
+                                </div>
+                                <img src="img/loader.gif" id="newsletter-loader" style="display: none;">
+                                <div class="input-group" id="newsletter-email-group">
+                                    <span class="input-group-addon" id="newsletter-email-icon">
                                         <span class="glyphicon glyphicon-envelope"></span>
                                     </span>
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" id="newsletter-email" placeholder="Email" required="required" />
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-skin">
