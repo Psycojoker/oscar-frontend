@@ -84,6 +84,36 @@
                     $("#newsletter-form .form-group").addClass("has-error");
                     $("#newsletter-email-errors").html("<p>Oups, une erreur s'est produite.</p>");
                 })
+        });
+        $("#contact-form button").click(function(event) {
+            event.preventDefault();
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var subject = $("#subject").val();
+            var message = $("#message").val();
+
+            var data = new FormData();
+            data.append(name="cntctfrm_contact_name", name);
+            data.append(name="cntctfrm_contact_email", email);
+            data.append(name="cntctfrm_contact_subject", subject);
+            data.append(name="cntctfrm_contact_message", message);
+            data.append(name="cntctfrm_contact_action", "send");
+            data.append(name="cntctfrm_language", "en");
+            data.append(name="cntctfrm_form_submited", "1");
+
+            $.ajax({
+                url: "news/?page_id=2",
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                type: 'POST',
+                success: function(data) {
+                    console.log("succes!");
+                    console.log(data);
+                    $("#debug").html(data);
+             }
+            })
         })
     });
 
