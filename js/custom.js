@@ -87,6 +87,29 @@
         });
         $("#contact-form button").click(function(event) {
             event.preventDefault();
+
+            ["name", "email", "subject", "message"].forEach(function(i) {
+                $("#" + i).parent().removeClass("has-error");
+            });
+
+            var get_all_required_fields = true;
+
+            // validation
+            ["name", "email", "subject", "message"].forEach(function(i) {
+                element = $("#" + i);
+                if (element.val()) {
+                    // we've got data!
+                    return;
+                }
+
+                element.parent().addClass("has-error");
+                var get_all_required_fields = false;
+            })
+
+            if (!get_all_required_fields) {
+                return;
+            }
+
             var name = $("#name").val();
             var email = $("#email").val();
             var subject = $("#subject").val();
