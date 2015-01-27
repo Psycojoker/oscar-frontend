@@ -508,7 +508,7 @@ form#contact-form .form-group label {
 }
 form#contact-form input,form#contact-form select,form#contact-form textarea {
     border-radius: 0;
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
   -webkit-box-shadow: none;
           box-shadow:  none;
 }
