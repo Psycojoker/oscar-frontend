@@ -92,7 +92,7 @@
                 $("#" + i).parent().removeClass("has-error");
             });
 
-            var get_all_required_fields = true;
+            get_all_required_fields = true;
 
             // validation
             ["name", "email", "subject", "message"].forEach(function(i) {
@@ -103,7 +103,7 @@
                 }
 
                 element.parent().addClass("has-error");
-                var get_all_required_fields = false;
+                get_all_required_fields = false;
             })
 
             if (!get_all_required_fields) {
