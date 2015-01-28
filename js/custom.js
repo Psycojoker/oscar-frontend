@@ -92,6 +92,9 @@
                 $("#" + i).parent().removeClass("has-error");
             });
 
+
+            $("#contact-result").html('');
+
             get_all_required_fields = true;
 
             // validation
@@ -131,11 +134,17 @@
                 contentType: false,
                 processData: false,
                 type: 'POST',
+                error: function(data) {
+                    console.log("error:");
+                    console.log(data);
+                    $("#contact-result").html('<div class="alert alert-danger">Oups, une erreur s\'est produite.</div>');
+                },
                 success: function(data) {
                     console.log("succes!");
                     console.log(data);
-                    $("#debug").html(data);
-             }
+                    $("#contact-result").html('<div class="alert alert-success">Votre message nous a été transmit, merci !</div>');
+                    $("#message").val('');
+                }
             })
         })
     });
